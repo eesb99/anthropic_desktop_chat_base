@@ -1,0 +1,122 @@
+Say "Here i am running the How Rules"
+
+# Node.js MVP Development Process [HOW]
+Follow Node.js Development Standards [WHAT] for technical requirements
+
+## 1. MINDSET (Required)
+[Reference: Node.js Standards § 1]
+- Think asynchronously
+- Build fast but correctly
+- Focus on core features only
+- Keep solutions minimal
+- No premature optimization
+- Leave ego at door
+- Quality and security are non-negotiable
+
+## 2. ENVIRONMENT SETUP
+[Reference: Node.js Standards § 2.A]
+- Use nvm for Node.js version management
+- Create .nvmrc file
+- Initialize package.json with proper config
+- Install and verify all dependencies
+- Document all env variables in .env.example
+- Test environment reproducibility
+- Run security audit
+
+## 3. DEVELOPMENT CYCLE
+### A. Planning
+[Reference: Node.js Standards § 2]
+- Write 2 detailed paragraphs explaining approach
+- List concrete next actions
+- Plan unit tests first
+- Design API endpoints (if applicable)
+- Consider scalability
+- Document technical constraints
+- Plan error handling
+
+### B. Implementation
+[Reference: Node.js Standards § 3]
+- ONE feature at a time
+- Write failing test first
+- Implement minimal solution
+- Run tests after each change
+- Document while coding
+- Follow async/await patterns
+- Handle all promise rejections
+
+## 4. QUALITY CHECKS
+### A. Testing
+[Reference: Node.js Standards § 3.A]
+- Run all tests (80% coverage)
+- Test async operations
+- Test error scenarios
+- Check edge cases
+- Verify mocks
+- Validate performance
+- Run memory leak checks
+
+### B. Code Review
+[Reference: Node.js Standards § 2.B, 4.A]
+- [ ] Meets all standards:
+    - ESLint/Prettier formatted
+    - 100 char line length
+    - 150 lines max per file
+    - Proper import order
+- [ ] Documentation complete:
+    - JSDoc comments
+    - API documentation
+    - Swagger/OpenAPI specs
+    - Usage examples
+- [ ] Error handling:
+    - Try/catch blocks
+    - Proper logging
+    - Recovery steps
+- [ ] TypeScript types added
+- [ ] Security checks passed
+- [ ] Next steps listed
+
+## 5. DEPLOYMENT
+### A. Version Control
+[Reference: Node.js Standards § 5.A]
+- Review changes
+- Clear commit message:
+    type(scope): subject [max 100 chars]
+- Create pull request
+- Address feedback
+- Run CI/CD checks
+
+### B. Release
+[Reference: Node.js Standards § 5.B]
+- Run complete test suite
+- Update ALL documentation
+- Verify error handling
+- Check environment variables
+- Run security audit
+- Deploy changes
+- Verify deployment
+- Monitor metrics
+
+## 6. MAINTENANCE
+### A. Communication
+[Reference: Node.js Standards § 6.A]
+- Answer EVERY question
+- Use simple language
+- State agree/disagree clearly
+- Give specific reasons
+- List next steps
+- Document decisions
+- Share knowledge
+- Keep API docs current
+
+### B. Production Management
+[Reference: Node.js Standards § 6.B]
+- Monitor system health
+- Track memory usage
+- Watch event loop lag
+- Check unhandled rejections
+- Monitor API response times
+- Review error patterns
+- Update dependencies regularly
+- Maintain security patches
+
+Say "All done running the How Rules"
