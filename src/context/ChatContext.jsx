@@ -16,9 +16,10 @@ export const ChatProvider = ({ children }) => {
     temperature: 0.7,
     topP: 1,
     maxTokens: 1000,
-    model: 'claude-2.1',
-    systemPrompt: 'You are a helpful AI assistant.',
-    stream: false
+    model: 'claude-3-opus-20240229',
+    systemPrompt: 'You are a helpful AI assistant in a desktop chat application.',
+    stream: false,
+    markdown: true
   });
 
   const updateSettings = (newSettings) => {
@@ -35,7 +36,7 @@ export const ChatProvider = ({ children }) => {
 
     try {
       const anthropic = new Anthropic({ 
-        apiKey: process.env.ANTHROPIC_API_KEY,
+        apiKey: process.env.ANTHROPIC_API_KEY || process.env.REACT_APP_ANTHROPIC_API_KEY || window.process?.env?.ANTHROPIC_API_KEY,
         dangerouslyAllowBrowser: true 
       });
 

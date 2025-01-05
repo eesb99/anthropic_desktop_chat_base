@@ -5,13 +5,13 @@ const anthropic = new Anthropic({
   dangerouslyAllowBrowser: true
 });
 
-export const sendMessage = async (message) => {
+export const sendMessage = async (message, settings) => {
   try {
     const response = await anthropic.messages.create({
-      model: 'claude-3-opus-20240229',
-      max_tokens: 1024,
+      model: settings.model || 'claude-3-opus-20240229',
+      max_tokens: settings.maxTokens || 1024,
       messages: [{ role: 'user', content: message }],
-      system: "You are a helpful AI assistant in a desktop chat application. When sharing code examples, always wrap them in ```python markdown blocks for proper formatting."
+      system: settings.systemPrompt || "You are a helpful AI assistant in a desktop chat application. When sharing code examples, always wrap them in ```python markdown blocks for proper formatting."
     });
     
     return {
